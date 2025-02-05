@@ -49,27 +49,27 @@ export default function Countdown() {
         style={{
           textAlign: "center",
           padding: "20px",
-          backgroundColor: "rgba(0, 0, 0, 0.7)", // Aumentar opacidad del fondo
+          backgroundColor: "rgba(0, 0, 0, 0.7)", // Mayor contraste en el fondo
           borderRadius: "12px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-          maxWidth: "90%", // Asegurarse de que el contenedor no sea más ancho que el 90% de la pantalla
+          maxWidth: "90%", // No más ancho que el 90% de la pantalla
           width: "90%", // Ajustar a un porcentaje para mayor responsividad
           margin: "0 auto", // Centrar el contenedor
         }}
       >
         <h1
           style={{
-            fontSize: "2.5rem", // Tamaño de fuente responsivo
+            fontSize: "2.5rem",
             fontWeight: "bold",
             color: "#D1D5DB",
             marginBottom: "16px",
-            }}
-          >
-            Daaaaale cheeeeee 🇧🇷
-          </h1>
-          <p
-            style={{
-            fontSize: "4rem", // Tamaño de fuente responsivo
+          }}
+        >
+          Daaaaale cheeeeee 🇧🇷
+        </h1>
+        <p
+          style={{
+            fontSize: "4rem",
             fontFamily: "monospace",
             fontWeight: "bold",
             color: "white",
@@ -78,6 +78,26 @@ export default function Countdown() {
           {formatTime(timeLeft)}
         </p>
       </div>
+
+      {/* Media Queries para móviles */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            div {
+              height: 100%;
+              padding: 10px;
+            }
+
+            h1 {
+              font-size: 1.8rem;
+            }
+
+            p {
+              font-size: 2.5rem;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 }
